@@ -1,0 +1,5 @@
+# Large media stays out of the theme repo; re-add the source clip as assets/tagide.mp4 to re-render
+assets/tagide.mp4
+renders/
+.hyperframes/
+node_modules/

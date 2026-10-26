@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "Montserrat", sans-serif;
+    }
+    #outro-cta {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 440px;
+      display: flex;
+      justify-content: center;
+    }
+    #outro-pill {
+      display: inline-block;
+      padding: 26px 56px;
+      border-radius: 999px;
+      background: #9c4f33;
+      color: #f6efe8;
+      font-weight: 800;
+      font-size: 50px;
+      letter-spacing: -0.01em;
+      box-shadow: 0 14px 34px rgba(156, 79, 51, 0.3);
+    }
+    #outro-pill em {
+      font-family: "EB Garamond", serif;
+      font-weight: 600;
+      font-size: 60px;
+    }
+  </style>
+  <div id="root" data-composition-id="outro" data-width="1080" data-height="1920">
+    <div id="outro-cta">
+      <div id="outro-pill">follow for <em>more</em></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(
+      "#outro-pill",
+      { opacity: 0, scale: 0.5, y: 30 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: "back.out(2.4)" },
+      0.62,
+    );
+    window.__timelines["outro"] = tl;
+  </script>
+</template>
